@@ -3,7 +3,6 @@ var router = express.Router();
 var bodyparser = require('body-parser');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    console.log('A get request');
     res.send("get index");
 });
 router.post('/', function(req, res, next) {
