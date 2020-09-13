@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var bodyparser = require('body-parser');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log('A get request');
@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
 });
 router.post('/', function(req, res, next) {
     console.log('A post request');
+    var payload = JSON.parse(req.body.payload);
+    console.log(payload);
     res.send("post index");
 });
 
